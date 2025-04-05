@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Welcome</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiV-6ki12Z2Med7Qz8Tr1MhNS5qnbdvlv-EoROzwJG4zixelpiNpiFYCQu_7c9V9i9JYUL7aZCFMnjeEtflMCZDwag_wB2d47-U9YDZNZ5C4bWzRpvhkmCgJr09KJTPzsudqlvIIP94jqmOMQ_fQjuaYCkH57bmGgnpPloFwUVhneoC-KZTfWX6irlSHOn/w1200-h630-p-k-no-nu/TN558019%20aurora%20bridge%20logo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: lightblue;
+    }
+    section {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" id="home-tab">Home</a>
+    <a href="#" id="about-tab">About</a>
+    <a href="#" id="photos-tab">Photos</a>
+  </nav>
+  <section id="content">
+    <h1>Welcome!</h1>
+    <p>Thank you for visiting my page!</p>
+  </section>
+
+  <script>
+    // Select elements
+    const homeTab = document.getElementById("home-tab");
+    const aboutTab = document.getElementById("about-tab");
+    const photosTab = document.getElementById("photos-tab")
+    const content = document.getElementById("content");
+
+    // Event listeners for tabs
+    homeTab.addEventListener("click", () => {
+      content.innerHTML = `
+        <h1>Welcome!</h1>
+        <p>Thank you for visiting my site.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh18D1Q1AIGN2rQ0SSH8Fghbd05l61CJDEcA&s>" alt="Photo 1" width="300">
+      `;
+    });
+
+    aboutTab.addEventListener("click", () => {
+      content.innerHTML = `
+        <h1>About</h1>
+        <h2> I live in the eastern upper peninsula of Michigan. I have three degrees, the first being a bachelor is Fire Science, my second degree was a masters in Emergency Management, and my most recent was a bachelor degree in Cybersecurity from Purdue University Global. I have a passion for security and take it very serious. I am also a signal officer for the U.S. Army.<h2>
+        <p>I am a proud father of two children. I love to travel and spend time with my family. I am also a big fan of the outdoors and love to hunt and fish. I love to ride ATV's in the summer and snowmobiles in the winter. 
+      `;
+    });
+
+     photosTab.addEventListener("click", () => {
+      content.innerHTML = `
+        <h1>Photos</h1>
+        <p>Here are some photos that I choose for the region I live:</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVJ6bj2UGdw1vkXN_A3G1RoCz1GFEIhqH9eA&s>" alt="Photo 1" width="300">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkFGrp_R-gmLoxnr9LXhhH2FUwdauePfviw&s">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLWPpqrfXnUdIeea2mRD6D0EV1GoWDXy7O8g&s">
+      `;
+    });
+                               
+  </script>
+</body>
+</html>
+
+
